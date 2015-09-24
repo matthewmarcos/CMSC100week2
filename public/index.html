@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	<meta charset="UTF-8"/>
 	<title>CMSC100 HTML</title>
 </head>
 <body>
-	
+	<form action="/students" method="post">
+		<input required="" type="text" name="name" id="name" placeholder="Name">
+		<br/>
+		<input required="" type="text" name="studno" id="studno" placeholder="studno" pattern="^\d{4}-\d{5}$" title="Leader ka ba?">
+		<br/>
+		<input type="email" name="email" id="email">
+		<br/>
+		<!-- <input type="color" name="color" id="color"></br> -->
+		<!-- <input type="date" name="date" id="date"></br> -->
+		<input type="range" name="range" id="range">
+		<br/>
+		<input type="number" name="number" id="number">
+		<br/>
+		<!-- <input type="time" name="time" id="time"></br> -->
+		<input type="submit" value="Create">
+	</form>
 </body>
 </html>
+
+<!-- 
+	Small case for name,
+	attribute="value" -> no space
+	Semantic Elements
+ -->

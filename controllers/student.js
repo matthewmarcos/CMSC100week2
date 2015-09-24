@@ -15,9 +15,7 @@ exports.find = function(req, res, next) {
 
 exports.findOne = function(req, res, next) {
 
-	console.log(req.ip + 'findOne()');
 	var id = req.params.id;
-	console.log(id);
 	db.query('SELECT * FROM student where id = ?', 
 		[req.params.id],
 		function(err, rows) {
@@ -36,7 +34,6 @@ exports.insert = function(req, res, next) {
 
 	var studno = req.body.studno;
 	var name = req.body.name;
-	console.log(studno + ' ' + name);
 	db.query('INSERT INTO student(studno, name) VALUES(?,?)', 
 		[req.body.studno, req.body.name],
 		function(err, rows) {
